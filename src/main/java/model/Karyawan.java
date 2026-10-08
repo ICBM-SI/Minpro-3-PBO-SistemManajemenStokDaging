@@ -9,24 +9,40 @@ package model;
  * @author LENOVO
  */
 public class Karyawan {
-    private int idKaryawan;
+ 
+    private final int idKaryawan;
     private String namaKaryawan;
     private String jabatan;
  
     public Karyawan(int idKaryawan, String namaKaryawan, String jabatan) {
         this.idKaryawan = idKaryawan;
-        this.namaKaryawan = namaKaryawan;
-        this.jabatan = jabatan;
+        setNamaKaryawan(namaKaryawan);
+        setJabatan(jabatan);
     }
  
-    public int getIdKaryawan() {return idKaryawan; }
-    public String getNamaKaryawan() {return namaKaryawan; }
-    public String getJabatan() {return jabatan; }
+    // ---------- GETTER ----------
+    public final int getIdKaryawan() { return idKaryawan; }
+    public String getNamaKaryawan() { return namaKaryawan; }
+    public String getJabatan() { return jabatan; }
  
-    public void setNamaKaryawan(String namaKaryawan) {this.namaKaryawan = namaKaryawan; }
-    public void setJabatan(String jabatan) {this.jabatan = jabatan; }
+    // ---------- SETTER DENGAN VALIDASI ----------
+    public void setNamaKaryawan(String namaKaryawan) {
+        if (Daging.isTeksValid(namaKaryawan)) {
+            this.namaKaryawan = namaKaryawan;
+        } else {
+            System.out.println("[Peringatan] Nama karyawan tidak boleh kosong, nilai tidak diubah");
+        }
+    }
  
-    public void tampilkan() {
-        System.out.println(idKaryawan + " | " + namaKaryawan + " | " + jabatan + " | " );
+    public void setJabatan(String jabatan) {
+        if (Daging.isTeksValid(jabatan)) {
+            this.jabatan = jabatan;
+        } else {
+            System.out.println("[Peringatan] Jabatan tidak boleh kosong, nilai tidak diubah");
+        }
+    }
+ 
+    public void tampilkanDetail() {
+        System.out.println(idKaryawan + " | " + namaKaryawan + " | " + jabatan);
     }
 }

@@ -9,20 +9,29 @@ package model;
  * @author LENOVO
  */
 public class StokKeluar extends TransaksiStok {
+ 
     private String alasan;
  
     public StokKeluar(int idStokKeluar, int idDaging, int idKaryawan, String tanggalKeluar,
                        int jumlah, String alasan, String keterangan) {
         super(idStokKeluar, idDaging, idKaryawan, tanggalKeluar, jumlah, keterangan);
-        this.alasan = alasan;
+        setAlasan(alasan);
     }
  
-    public String getAlasan() {return alasan; }
-    public void setAlasan(String alasan) {this.alasan = alasan; }
+    public String getAlasan() { return alasan; }
  
+    public void setAlasan(String alasan) {
+        if (Daging.isTeksValid(alasan)) {
+            this.alasan = alasan;
+        } else {
+            System.out.println("[Peringatan] Alasan tidak boleh kosong, nilai tidak diubah");
+        }
+    }
+ 
+    // OVERRIDING - implementasi tampilkanDetail() khusus StokKeluar
     @Override
-    public void tampilkan() {
-        System.out.println(getIdTransaksi() + " | " + "Daging: " + getIdDaging() + " | " + "Karyawan: " + getIdKaryawan() + " | " 
-                + getTanggal() + " | " + getJumlah() + " | " +  alasan + ": " + getKeterangan());
+    public void tampilkanDetail() {
+        System.out.println(getIdTransaksi() + " | Daging:" + getIdDaging() + " | Karyawan:" + getIdKaryawan()
+                + " | " + getTanggalTransaksi() + " | " + getJumlah() + " | " + alasan + " | " + getKeterangan());
     }
 }
