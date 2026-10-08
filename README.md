@@ -7,6 +7,24 @@
 # Deskripsi Program
 Program Sistem Manajemen Stok Daging merupakan program yang dibuat untuk memudahkan proses manajemen stok daging dalam gudang. Program ini dibuat menggunakan Java dan menerapkan pendekatan pemrograman yang menggunakan objek untuk menyusun dan mengatur kode atau yang biasa disebut Object Oriented Programming (OOP).
 
+# Penjelasan Struktur Package
+Program ini memiliki 4 struktur package yang terdiri dari Main, Model, View, dan Controller.
+## A. Main
+
+Main berfungsi sebagai entry point pada program yang berfungsi untuk menginisialisasi konfigurasi awal dan menghubungkan berbagai komponen MVC
+
+## B. Model
+
+Model memiliki tugas sebagai bagian yang bertanggung jawab penuh atas data dasar dari aplikasi. Fungsi model mencakup beberapa hal seperti mengatur bagaimana data disimpan, diambil, dan dimanipulasi dari database atau sumber data lainnya. Model juga memiliki tugas untuk mendefinisikan struktur data atau objek dan melakukan operasi CRUD (Create, Read, Update, Delete) ke database program.
+
+## C. View
+
+View merupakan package pada program yang menangani tampilan dan antarmuka pengguna. View berfungsi untuk menyajikan data yang dikirim oleh Controller kepada pengguna dalam format yang mudah dipahami. View juga tidak boleh mengakses database secara langsung namun bisa menerima input langsung dari pengguna untuk diteruskan ke Controller.
+
+## D. Controller
+
+Package Controller bertindak sebagai jembatan atau otak yang mengatur lalu lintas antara Model dan View. Controller memiliki fungsi untuk menerima permintaan dari pengguna melalui View, memprosesnya menggunakan Model, dan mengembalikan hasilnya kembali ke View. 
+
 # Penjelasan Alur Program
 ## A. Menu Utama
 
