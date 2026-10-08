@@ -156,6 +156,7 @@ Kedua transaksi ini punya kesamaan data yaitu: idTransaksi, idDaging, idKaryawan
 Polymorphism memiliki Override dan Overloading, keduanya memiliki fungsi yang berbeda dengan cara kerjanya sendiri. Overriding berlokasi di antara superclass dan subclass, sedangkan Overloading berlokasi di dalam satu class. Parameter keduanya juga berbeda yang dimana Override harus sama, sedangkan Overloading harus berbeda.
 
 ## 1. Override
+
 Method tampilkanDetail() yang abstract di class TransaksiStok di Override oleh kedua subclass dengan isi yang berbeda. Perbedaannya adalah class StokMasuk punya idSupplier, sedangkan class StokKeluar punya alasan.
 Walau nama methodnya sama, hasil output tetap menyesuaikan jenis objek yang ditimpa.
 
@@ -167,6 +168,24 @@ StokKeluar:
 
 <img width="1127" height="146" alt="image" src="https://github.com/user-attachments/assets/ed436e30-ebdb-4b5d-bad4-ca727e2aa0ee" />
 
+## 2. Overloading
+
+Overloading adalah beberapa method dengan nama yang sama di satu class, dibedakan oleh jumlah atau tipe parameternya. Program ini memiliki 3 contoh penerapan tersebut.
+
+a. tampilkanBarisData di class DagingView, tipe parameter berbeda
+
+<img width="617" height="341" alt="image" src="https://github.com/user-attachments/assets/fd613f65-4f68-4530-8d66-2e887917db31" />
+
+b. bacaAngka dan bacaTeks di class DagingView, jumlah parameter berbeda
+
+<img width="897" height="448" alt="image" src="https://github.com/user-attachments/assets/a890a059-e332-464e-bd7e-ed3be3e8bb49" />
+
+<img width="532" height="316" alt="image" src="https://github.com/user-attachments/assets/f5e3233b-0b2d-4ed4-a3c8-276defdac46b" />
+
+c. isAngkaPositif di classDaging, tipe parameter berbeda
+
+<img width="542" height="162" alt="image" src="https://github.com/user-attachments/assets/4b1400c3-b84b-4559-8615-ebb3fff7836e" />
+
 # Penerapan Abstraction
 
 ## TransaksiStok
@@ -176,6 +195,8 @@ Penerapan Abstraction terletak pada class TransaksiStok yang merupakan abstract 
 <img width="402" height="172" alt="image" src="https://github.com/user-attachments/assets/d133429e-132d-42b6-9e6b-1ddde245c692" />
 
 <img width="452" height="72" alt="image" src="https://github.com/user-attachments/assets/e45cb756-4463-49a6-900d-3edf7325c17a" />
+
+
 
 
 
