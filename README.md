@@ -172,17 +172,17 @@ StokKeluar:
 
 Overloading adalah beberapa method dengan nama yang sama di satu class, dibedakan oleh jumlah atau tipe parameternya. Program ini memiliki 3 contoh penerapan tersebut.
 
-a. tampilkanBarisData di class DagingView, tipe parameter berbeda
+### A. tampilkanBarisData di class DagingView, tipe parameter berbeda
 
 <img width="617" height="341" alt="image" src="https://github.com/user-attachments/assets/fd613f65-4f68-4530-8d66-2e887917db31" />
 
-b. bacaAngka dan bacaTeks di class DagingView, jumlah parameter berbeda
+### B. bacaAngka dan bacaTeks di class DagingView, jumlah parameter berbeda
 
 <img width="897" height="448" alt="image" src="https://github.com/user-attachments/assets/a890a059-e332-464e-bd7e-ed3be3e8bb49" />
 
 <img width="532" height="316" alt="image" src="https://github.com/user-attachments/assets/f5e3233b-0b2d-4ed4-a3c8-276defdac46b" />
 
-c. isAngkaPositif di classDaging, tipe parameter berbeda
+### C. isAngkaPositif di classDaging, tipe parameter berbeda
 
 <img width="542" height="162" alt="image" src="https://github.com/user-attachments/assets/4b1400c3-b84b-4559-8615-ebb3fff7836e" />
 
