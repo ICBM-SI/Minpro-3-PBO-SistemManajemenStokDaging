@@ -16,11 +16,7 @@ import java.util.ArrayList;
 public class StokMasukController {
  
     private int idStokMasukBerikutnya = 1;
- 
-    // tidak ada data master Supplier di program ini, jadi ID-nya digenerate
-    // otomatis oleh sistem - user tidak perlu (dan tidak bisa) mengetiknya sendiri
     private int idSupplierBerikutnya = 1;
- 
     private final ArrayList<StokMasuk> daftarStokMasuk;
     private final Dagingcontroller dagingController;
     private final Karyawancontroller karyawanController;

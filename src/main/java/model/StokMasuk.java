@@ -9,9 +9,7 @@ package model;
  * @author LENOVO
  */
 public class StokMasuk extends TransaksiStok {
- 
     private int idSupplier;
- 
     public StokMasuk(int idStokMasuk, int idDaging, int idSupplier, int idKaryawan,
                       String tanggalMasuk, int jumlah, String keterangan) {
         super(idStokMasuk, idDaging, idKaryawan, tanggalMasuk, jumlah, keterangan);
@@ -28,7 +26,6 @@ public class StokMasuk extends TransaksiStok {
         }
     }
  
-    // OVERRIDING - implementasi tampilkanDetail() khusus StokMasuk
     @Override
     public void tampilkanDetail() {
         System.out.println(getIdTransaksi() + " | Daging:" + getIdDaging() + " | Supplier:" + idSupplier

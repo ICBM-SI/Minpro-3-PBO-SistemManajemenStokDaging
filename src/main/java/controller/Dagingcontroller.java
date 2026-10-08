@@ -13,9 +13,7 @@ import java.util.ArrayList;
  */
 public class Dagingcontroller {
  
-    // ID digenerate otomatis oleh sistem, user tidak pernah diminta mengetik ID baru
     private int idDagingBerikutnya = 1;
- 
     private final ArrayList<Daging> daftarDaging;
     private final DagingView view;
  
@@ -24,7 +22,6 @@ public class Dagingcontroller {
         this.view = view;
     }
  
-    // dipakai untuk mengisi dummy data awal maupun oleh tambahDaging()
     public void tambahkanDataAwal(String namaDaging, String bagianDaging, double berat,
                                    String tanggalMasuk, String tanggalExpired, int stok, String status) {
         daftarDaging.add(new Daging(idDagingBerikutnya++, namaDaging, bagianDaging, berat,
@@ -103,7 +100,6 @@ public class Dagingcontroller {
         view.tampilkanPesan("Data daging berhasil dihapus!");
     }
  
-    // dipakai juga oleh StokMasukController & StokKeluarController untuk validasi referensi
     public Daging cariDagingById(int idDaging) {
         for (Daging dagingItem : daftarDaging) {
             if (dagingItem.getIdDaging() == idDaging) {

@@ -9,7 +9,6 @@ package model;
  * @author LENOVO
  */
 public class Karyawan {
- 
     private final int idKaryawan;
     private String namaKaryawan;
     private String jabatan;
@@ -20,12 +19,12 @@ public class Karyawan {
         setJabatan(jabatan);
     }
  
-    // ---------- GETTER ----------
+    //getter
     public final int getIdKaryawan() { return idKaryawan; }
     public String getNamaKaryawan() { return namaKaryawan; }
     public String getJabatan() { return jabatan; }
  
-    // ---------- SETTER DENGAN VALIDASI ----------
+    //setter
     public void setNamaKaryawan(String namaKaryawan) {
         if (Daging.isTeksValid(namaKaryawan)) {
             this.namaKaryawan = namaKaryawan;

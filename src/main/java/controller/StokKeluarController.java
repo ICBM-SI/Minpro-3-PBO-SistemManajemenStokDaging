@@ -16,7 +16,6 @@ import java.util.ArrayList;
 public class StokKeluarController {
  
     private int idStokKeluarBerikutnya = 1;
- 
     private final ArrayList<StokKeluar> daftarStokKeluar;
     private final Dagingcontroller dagingController;
     private final Karyawancontroller karyawanController;

@@ -24,12 +24,10 @@ public class ManajemenStokDaging {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         DagingView view = new DagingView(scanner);
- 
         ArrayList<Daging> daftarDaging = new ArrayList<>();
         ArrayList<Karyawan> daftarKaryawan = new ArrayList<>();
         ArrayList<StokMasuk> daftarStokMasuk = new ArrayList<>();
         ArrayList<StokKeluar> daftarStokKeluar = new ArrayList<>();
- 
         Dagingcontroller dagingController = new Dagingcontroller(daftarDaging, view);
         Karyawancontroller karyawanController = new Karyawancontroller(daftarKaryawan, view);
         StokMasukController stokMasukController = new StokMasukController(
@@ -60,8 +58,7 @@ public class ManajemenStokDaging {
  
         scanner.close();
     }
- 
-    // dummy data wajib minimal 1 per entitas, supaya menu "Lihat" langsung ada isinya
+
     private static void muatDataAwal(Dagingcontroller dagingController, Karyawancontroller karyawanController,
                                       StokMasukController stokMasukController, StokKeluarController stokKeluarController) {
  

@@ -9,7 +9,6 @@ package model;
  * @author LENOVO
  */
 public abstract class TransaksiStok {
- 
     private final int idTransaksi;
     private final int idDaging;
     private int idKaryawan;
@@ -17,7 +16,6 @@ public abstract class TransaksiStok {
     private int jumlah;
     private String keterangan;
  
-    // constructor "protected": hanya boleh dipanggil oleh subclass lewat super(...)
     protected TransaksiStok(int idTransaksi, int idDaging, int idKaryawan,
                              String tanggalTransaksi, int jumlah, String keterangan) {
         this.idTransaksi = idTransaksi;
@@ -28,7 +26,7 @@ public abstract class TransaksiStok {
         setKeterangan(keterangan);
     }
  
-    // ---------- GETTER ----------
+    //getter
     public final int getIdTransaksi() { return idTransaksi; }
     public final int getIdDaging() { return idDaging; }
     public int getIdKaryawan() { return idKaryawan; }
@@ -36,7 +34,7 @@ public abstract class TransaksiStok {
     public int getJumlah() { return jumlah; }
     public String getKeterangan() { return keterangan; }
  
-    // ---------- SETTER DENGAN VALIDASI ----------
+    //setter
     public void setIdKaryawan(int idKaryawan) {
         if (Daging.isAngkaPositif(idKaryawan)) {
             this.idKaryawan = idKaryawan;
@@ -69,8 +67,6 @@ public abstract class TransaksiStok {
             System.out.println("[Peringatan] Keterangan tidak boleh kosong, nilai tidak diubah");
         }
     }
- 
-    // ABSTRACT METHOD - wajib diisi (di-override) oleh StokMasuk dan StokKeluar,
-    // karena cara menampilkan detailnya berbeda (POLYMORPHISM - overriding)
+
     public abstract void tampilkanDetail();
 }

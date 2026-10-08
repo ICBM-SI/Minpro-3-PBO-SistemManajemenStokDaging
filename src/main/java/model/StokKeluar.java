@@ -9,9 +9,7 @@ package model;
  * @author LENOVO
  */
 public class StokKeluar extends TransaksiStok {
- 
     private String alasan;
- 
     public StokKeluar(int idStokKeluar, int idDaging, int idKaryawan, String tanggalKeluar,
                        int jumlah, String alasan, String keterangan) {
         super(idStokKeluar, idDaging, idKaryawan, tanggalKeluar, jumlah, keterangan);
@@ -27,8 +25,7 @@ public class StokKeluar extends TransaksiStok {
             System.out.println("[Peringatan] Alasan tidak boleh kosong, nilai tidak diubah");
         }
     }
- 
-    // OVERRIDING - implementasi tampilkanDetail() khusus StokKeluar
+
     @Override
     public void tampilkanDetail() {
         System.out.println(getIdTransaksi() + " | Daging:" + getIdDaging() + " | Karyawan:" + getIdKaryawan()

@@ -57,7 +57,6 @@ public class Karyawancontroller {
         view.tampilkanTabelKaryawan(daftarKaryawan);
     }
  
-    // dipakai juga oleh StokMasukController & StokKeluarController untuk validasi referensi
     public Karyawan cariKaryawanById(int idKaryawan) {
         for (Karyawan karyawanItem : daftarKaryawan) {
             if (karyawanItem.getIdKaryawan() == idKaryawan) {
