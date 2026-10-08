@@ -20,14 +20,15 @@ import java.util.Scanner;
  * @author LENOVO
  */
 public class ManajemenStokDaging {
- 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         DagingView view = new DagingView(scanner);
+ 
         ArrayList<Daging> daftarDaging = new ArrayList<>();
         ArrayList<Karyawan> daftarKaryawan = new ArrayList<>();
         ArrayList<StokMasuk> daftarStokMasuk = new ArrayList<>();
         ArrayList<StokKeluar> daftarStokKeluar = new ArrayList<>();
+ 
         Dagingcontroller dagingController = new Dagingcontroller(daftarDaging, view);
         Karyawancontroller karyawanController = new Karyawancontroller(daftarKaryawan, view);
         StokMasukController stokMasukController = new StokMasukController(
@@ -47,12 +48,16 @@ public class ManajemenStokDaging {
                     "0. Keluar"});
             pilihanMenuUtama = view.bacaAngka("Pilih menu: ", 0, 4);
  
-            switch (pilihanMenuUtama) {
-                case 1: dagingController.jalankanMenu(); break;
-                case 2: karyawanController.jalankanMenu(); break;
-                case 3: stokMasukController.jalankanMenu(); break;
-                case 4: stokKeluarController.jalankanMenu(); break;
-                case 0: view.tampilkanPesan("Program selesai."); break;
+            if (pilihanMenuUtama == 1) {
+                dagingController.jalankanMenu();
+            } else if (pilihanMenuUtama == 2) {
+                karyawanController.jalankanMenu();
+            } else if (pilihanMenuUtama == 3) {
+                stokMasukController.jalankanMenu();
+            } else if (pilihanMenuUtama == 4) {
+                stokKeluarController.jalankanMenu();
+            } else if (pilihanMenuUtama == 0) {
+                view.tampilkanPesan("Program selesai.");
             }
         } while (pilihanMenuUtama != 0);
  

@@ -16,8 +16,7 @@ public abstract class TransaksiStok {
     private int jumlah;
     private String keterangan;
  
-    protected TransaksiStok(int idTransaksi, int idDaging, int idKaryawan,
-                             String tanggalTransaksi, int jumlah, String keterangan) {
+    protected TransaksiStok(int idTransaksi, int idDaging, int idKaryawan, String tanggalTransaksi, int jumlah, String keterangan){
         this.idTransaksi = idTransaksi;
         this.idDaging = idDaging;
         setIdKaryawan(idKaryawan);
@@ -27,12 +26,12 @@ public abstract class TransaksiStok {
     }
  
     //getter
-    public final int getIdTransaksi() { return idTransaksi; }
-    public final int getIdDaging() { return idDaging; }
-    public int getIdKaryawan() { return idKaryawan; }
-    public String getTanggalTransaksi() { return tanggalTransaksi; }
-    public int getJumlah() { return jumlah; }
-    public String getKeterangan() { return keterangan; }
+    public final int getIdTransaksi() { return idTransaksi;}
+    public final int getIdDaging() { return idDaging;}
+    public int getIdKaryawan() { return idKaryawan;}
+    public String getTanggalTransaksi() { return tanggalTransaksi;}
+    public int getJumlah() { return jumlah;}
+    public String getKeterangan() { return keterangan;}
  
     //setter
     public void setIdKaryawan(int idKaryawan) {

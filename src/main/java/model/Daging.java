@@ -133,15 +133,13 @@ public class Daging {
         String teksTgl = bagianTanggal[0];
         String teksBulan = bagianTanggal[1];
         String teksTahun = bagianTanggal[2];
- 
         if (teksTgl.length() != 2 || teksBulan.length() != 2 || teksTahun.length() != 4) {
             return false;
         }
- 
         if (!isHanyaAngka(teksTgl) || !isHanyaAngka(teksBulan) || !isHanyaAngka(teksTahun)) {
             return false;
         }
- 
+        
         int tanggal = Integer.parseInt(teksTgl);
         int bulan = Integer.parseInt(teksBulan);
         int tahun = Integer.parseInt(teksTahun);
@@ -165,7 +163,7 @@ public class Daging {
         }
         return digit.length() >= 1 && digit.length() <= 9 && isHanyaAngka(digit);
     }
- 
+
     public static boolean isAngkaDesimal(String teks) {
         if (!isTeksValid(teks)) {
             return false;
@@ -194,19 +192,17 @@ public class Daging {
     }
  
     private static int jumlahHariDalamBulan(int bulan, int tahun) {
-        switch (bulan) {
-            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
-                return 31;
-            case 4: case 6: case 9: case 11:
-                return 30;
-            case 2:
-                if (isTahunKabisat(tahun)) {
-                    return 29;
-                }
-                return 28;
-            default:
-                return 0;
+        if (bulan == 1 || bulan == 3 || bulan == 5 || bulan == 7 || bulan == 8 || bulan == 10 || bulan == 12) {
+            return 31;
+        } else if (bulan == 4 || bulan == 6 || bulan == 9 || bulan == 11) {
+            return 30;
+        } else if (bulan == 2) {
+            if (isTahunKabisat(tahun)) {
+                return 29;
+            }
+            return 28;
         }
+        return 0;
     }
  
     private static boolean isTahunKabisat(int tahun) {

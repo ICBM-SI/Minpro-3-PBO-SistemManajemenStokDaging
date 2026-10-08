@@ -12,9 +12,7 @@ import java.util.ArrayList;
  * @author LENOVO
  */
 public class Karyawancontroller {
- 
     private int idKaryawanBerikutnya = 1;
- 
     private final ArrayList<Karyawan> daftarKaryawan;
     private final DagingView view;
  
@@ -36,10 +34,10 @@ public class Karyawancontroller {
                     "0. Kembali ke Menu Utama"});
             pilihanMenu = view.bacaAngka("Pilih menu: ", 0, 2);
  
-            switch (pilihanMenu) {
-                case 1: tambahKaryawan(); break;
-                case 2: tampilkanDaftarKaryawan(); break;
-                case 0: break;
+            if (pilihanMenu == 1) {
+                tambahKaryawan();
+            } else if (pilihanMenu == 2) {
+                tampilkanDaftarKaryawan();
             }
         } while (pilihanMenu != 0);
     }

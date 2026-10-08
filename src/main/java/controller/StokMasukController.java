@@ -14,7 +14,6 @@ import java.util.ArrayList;
  * @author LENOVO
  */
 public class StokMasukController {
- 
     private int idStokMasukBerikutnya = 1;
     private int idSupplierBerikutnya = 1;
     private final ArrayList<StokMasuk> daftarStokMasuk;
@@ -50,10 +49,10 @@ public class StokMasukController {
                     "0. Kembali ke Menu Utama"});
             pilihanMenu = view.bacaAngka("Pilih menu: ", 0, 2);
  
-            switch (pilihanMenu) {
-                case 1: catatStokMasuk(); break;
-                case 2: tampilkanDaftarStokMasuk(); break;
-                case 0: break;
+            if (pilihanMenu == 1) {
+                catatStokMasuk();
+            } else if (pilihanMenu == 2) {
+                tampilkanDaftarStokMasuk();
             }
         } while (pilihanMenu != 0);
     }
